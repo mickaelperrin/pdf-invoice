@@ -610,7 +610,7 @@ class InvoicePrinter extends FPDF
                 $align = array_key_exists('settings', $text) && array_key_exists('align', $text['settings']) ? $text['settings']['align'] : 'L';
                 $this->SetTextColor(80, 80, 80);
                 $this->SetFont($this->font, '', 8);
-                $this->MultiCell(0, 4, iconv("UTF-8", $this->charset, $text[1]), 0, $align, 0);
+                $this->MultiCell(0, 4, iconv("UTF-8", "ISO-8859-1", $text[1]), 0, $align, 0);
                 $this->Ln(4);
             }
         }
